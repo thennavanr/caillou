@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title Caillou
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        %a.brand{href: "#"} Caillou 
+        .nav-collapse
+          %ul.nav
+            %li= link_to "Home", home_path
+            %li= link_to "Who we", whowe_path
+            %li= link_to "Our Services", services_path
+            %li= link_to "Partner Us", partners_path
+            %li= link_to "Contact Us", contacts_path
+    .container
+      .row
+        .span9
+          = yield
+        .span3
+          %h2
+            About Us
+        Sed faucibus sed justo mollis semper. Donec lacinia est massa, ut egestas lectus vulputate sed. Ut tempor elit malesuada leo adipiscing, nec consequat tellus rutrum. Nam at sollicitudin nulla, eu bibendum enim. Aliquam condimentum aliquet ante eget mollis. Donec vel vulputate tortor. Cras commodo ac diam ac pharetra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean vulputate erat quam, non pulvinar felis semper in. Sed ultricies gravida porta. Ut non porttitor sapien, ac convallis urna. Vivamus mauris lacus, vehicula vel hendrerit at, tempor convallis metus. Nullam lacinia eleifend suscipit. Nullam imperdiet luctus pretium. Ut egestas, sem id bibendum pellentesque, sapien neque sagittis mauris, vitae auctor nisi lorem vitae erat. Vestibulum tempus vestibulum purus, vel tempor magna egestas quis. 
